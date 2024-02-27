@@ -54,7 +54,7 @@ class BaseType {
           : prefixed;
 
   String getRepeatedDartType(FileGenerator fileGen) =>
-      '$protobufImportPrefix.PbList<${getDartType(fileGen)}>';
+      '$coreImportPrefix.List<${getDartType(fileGen)}>';
 
   String getRepeatedDartTypeIterable(FileGenerator fileGen) =>
       '$coreImportPrefix.Iterable<${getDartType(fileGen)}>';
