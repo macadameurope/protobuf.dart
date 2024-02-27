@@ -345,7 +345,7 @@ class MessageGenerator extends ProtobufContainer {
       out.println(
           'factory $classname.fromBuffer($coreImportPrefix.List<$coreImportPrefix.int> i,'
           ' [$protobufImportPrefix.ExtensionRegistry r = $protobufImportPrefix.ExtensionRegistry.EMPTY])'
-          ' => create()..mergeFromBuffer(i, r);');
+          ' { final reader = $protobufImportPrefix.CodedBufferReader(i,sizeLimit :i.length); return create()..mergeFromCodedBufferReader(reader, r);}');
       out.println('factory $classname.fromJson($coreImportPrefix.String i,'
           ' [$protobufImportPrefix.ExtensionRegistry r = $protobufImportPrefix.ExtensionRegistry.EMPTY])'
           ' => create()..mergeFromJson(i, r);');
